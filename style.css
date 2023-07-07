@@ -1,0 +1,323 @@
+
+.gif-background{
+    margin-bottom: 700px;
+}
+
+.gif-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .navbar {
+    background-color: #f2f2f2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu li {
+    margin: 0 10px;
+  }
+  
+  .menu li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .menu li a:hover {
+    font-size: 24px;
+    color: rgb(1, 1, 114);
+  }
+  
+  .menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+    border: none;
+    background: transparent;
+  }
+
+  #quem-sou{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin-bottom: 120px;
+  }
+
+  #quem-sou img{
+    width: 200px; 
+    height: auto;
+    float: left;
+    margin-right: 20px;
+    border-radius: 20px;
+    border-bottom: 10px #333;
+  }
+
+  #habilidades {
+    text-align: center;
+  }
+
+  #habilidades .logo-img{
+    width: 100px; 
+    height: auto; 
+  }
+
+  #habilidades p {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+  }
+  
+  .grafico {
+    width: 800px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  
+  .logos img {
+    width: 60px; 
+    height: auto; 
+    margin: 5px; 
+  }
+
+  .logo-html{
+    width: 150px;
+    height: auto;
+  }
+
+  .logo .logo-css{
+    width: 30px;
+  }
+  .carousel {
+    margin-top: 20px;
+  }
+  
+  .carousel-item {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    color: #000;
+  }
+  
+  .card {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .card h3 {
+    margin-top: 10px;
+  }
+  
+  .card p {
+    margin-top: 5px;
+  }
+  
+  #projetos {
+    margin-top: 100px;
+    text-align: center;
+  }
+
+  #carouselExampleIndicators li{
+    text-align: center;
+  }
+  
+#contato {
+  margin-top: 100px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#contato h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+#contato p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+#contato div {
+  margin-bottom: 20px;
+}
+
+#contato a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 24px;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+#contato a:hover {
+  color: #000;
+}
+
+#contato form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contato label {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+#contato input,
+#contato textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+#contato button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #333;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contato button:hover {
+  background-color: #000;
+}
+
+footer {
+  background-color: #f5f5f5;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+  color: #888;
+}
+
+a {
+font-style: italic; 
+text-decoration: none;
+color: #000;
+}
+p{
+  color: #000;
+}
+
+  /* Estilos para o menu responsivo */
+  @media screen and (max-width: 400px) {
+   
+body{
+  max-width: 330px;
+}
+    .menu {
+      flex-direction: column;
+      align-items: flex-start;
+      display: none; /* Oculta o menu responsivo por padrão */
+    }
+    
+    .menu li {
+      display: block;
+      margin: 10px 0;
+    }
+    
+    .menu-icon {
+      display: block;
+    }
+    
+    /* Exibir o menu quando o botão for clicado */
+    #menu-toggle:checked ~ .menu {
+      display: flex;
+    }
+  
+    .gif-background .mobile-gif {
+    width: 330px;
+    height: auto;
+    }
+
+    .gif-background{
+        margin-top: 200px;
+        
+        margin-bottom: 200px;
+    }
+
+    #quem-sou h2{
+        font-size: 18px;
+    }
+   
+    .gif-background .desktop-gif {
+      display: none;
+      margin-bottom: 700px;
+      margin-top: 200px;
+    }
+
+    #quem-sou{
+        margin-bottom: 90px;
+    }
+
+    .grafico{
+        width: 320px;
+        height: auto;
+        
+      }
+      .card {
+        width: 100%;
+      }
+
+      #projeto{
+        max-width: 330px;
+      }
+
+  }
+  
+
+
+  @media screen and (min-width: 401px) {
+    .gif-background .mobile-gif {
+      display: none;
+      margin-bottom: 700px;
+      margin-top: 200px;
+    }
+  }
