@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
  function alterarCor() {
     var body = document.querySelector('body');
+     var elementosTexto = document.querySelectorAll('#contato p, #contato a, #contato form label');
     var elementosTexto = document.querySelectorAll('h1, p');
     
     if (body.style.backgroundColor === 'white') {
