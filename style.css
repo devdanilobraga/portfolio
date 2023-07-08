@@ -3,6 +3,11 @@ body {
   color: black;
 }
 
+#contato {
+      background-color: white;
+      color: black;
+    }
+
 .gif-background{
     margin-bottom: 700px;
 }
