@@ -6,6 +6,7 @@
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <title>Portfolio Danilo Braga</title>
       <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
       <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
@@ -42,9 +43,9 @@
           <div id="habilidades">
             <img src="assets/NivelConhecimento.png" alt="grafico Nivel Conhecimento" class="grafico">
             <p>Esse grafico é uma forma de mostrar em forma de grafico alguns do meus principais conhecimentos entre eles tambem estão:  </p>
-            <div class="logos">
+            <div class="logos-carousel" id="logos-carousel">
               <img src="assets/HTML5_logo.png" alt="logo html" class="logo-img">
-              <img src="assets/CSS3_logo.png" alt="logo css" class="logo-img">
+              <img src="assets/logo-css.webp" alt="logo css" class="logo-img" id="css3">
               <img src="assets/JavaScript_logo.png" alt="logo javascript" class="logo-img">
               <img src="assets/logo-java.png" alt="logo java" class="logo-img">
               <img src="assets/mysql-logo.jpg" alt="logo mysql" class="logo-img">
@@ -232,7 +233,7 @@
             </div>
             
           <div id="contato">
-            <p>🟢 Disponivel para: Projetos freelance, CLT e PJ.</p>
+            <p>🟢 Disponivel para:<br> Projetos freelance, CLT e PJ.</p>
             <div>
             <a href="https://www.linkedin.com/in/danilo-braga-785b70136/" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="https://api.whatsapp.com/send?phone=5521998766007" target="_blank"><i class="fab fa-whatsapp"></i></a>
@@ -260,6 +261,8 @@
           </footer>
           
           <script src="script.js"></script>
-         
+          <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+          
       </body>
       </html>
