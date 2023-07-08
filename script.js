@@ -31,3 +31,22 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
   });
+
+ function alterarCor() {
+    var body = document.querySelector('body');
+    var elementosTexto = document.querySelectorAll('h1, p');
+    
+    if (body.style.backgroundColor === 'white') {
+      body.style.backgroundColor = 'black';
+      body.style.color = 'white';
+      elementosTexto.forEach(function(elemento) {
+        elemento.style.color = 'white';
+      });
+    } else {
+      body.style.backgroundColor = 'white';
+      body.style.color = 'black';
+      elementosTexto.forEach(function(elemento) {
+        elemento.style.color = 'black';
+      });
+    }
+  }
