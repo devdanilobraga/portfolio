@@ -19,4 +19,15 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById("mensagem").value = "";
   }
 
-  
+   $(document).ready(function(){
+    if ($(window).width() < 768) {
+      $('#logos-carousel').slick({
+        dots: false,
+        arrows: false,
+        autoplay: true, 
+        autoplaySpeed: 2000,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      });
+    }
+  });
