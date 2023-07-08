@@ -249,9 +249,7 @@ p{
   /* Estilos para o menu responsivo */
   @media screen and (max-width: 400px) {
    
-body{
-  max-width: 330px;
-}
+
     .menu {
       flex-direction: column;
       align-items: flex-start;
@@ -273,18 +271,31 @@ body{
     }
   
     .gif-background .mobile-gif {
-    width: 330px;
+    width: 100%;
     height: auto;
+    margin-top: 50px;
     }
 
     .gif-background{
         margin-top: 200px;
-        
         margin-bottom: 200px;
     }
 
+    #quem-sou{
+      display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 90px;
+    }
+
     #quem-sou h2{
-        font-size: 18px;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    #quem-sou img{
+      margin-bottom: 10px;
     }
    
     .gif-background .desktop-gif {
@@ -293,8 +304,47 @@ body{
       margin-top: 200px;
     }
 
-    #quem-sou{
-        margin-bottom: 90px;
+    .logos-carousel {
+      margin: 0 auto;
+      max-width: 90%;
+    }
+  
+    .logos-carousel .slick-slide img {
+      width: 100%;
+      height: auto;
+      width: 20px;
+      height: auto;
+    }
+    .logo-img{
+      width: 20px;
+      height: auto;
+    }
+  
+    .logos-carousel .slick-dots {
+      display: none; /* Removendo a exibição dos pontos de paginação */
+    }
+  
+    .logos-carousel .slick-prev,
+    .logos-carousel .slick-next {
+      font-size: 24px;
+      background-color: #fff;
+      color: #000;
+      width: 20px;
+      height: auto;
+      border-radius: 50%;
+    }
+  
+    .logos-carousel .slick-prev {
+      left: -40px;
+    }
+  
+    .logos-carousel .slick-next {
+      right: -40px;
+    }
+  
+    .logos-carousel .slick-prev:before,
+    .logos-carousel .slick-next:before {
+      content: "";
     }
 
     .grafico{
