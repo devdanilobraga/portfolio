@@ -11,9 +11,53 @@ body {
 .gif-background{
     margin-bottom: 700px;
 }
+.darkmodelabel {
+  width: 80px;
+  height: 30px;
+  position: relative;
+  display: block;
+  background: #ebebeb;
+  border-radius: 100px;
+  box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.darkmodelabel:after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(180deg, #ffcc89, #d8860b);
+  border-radius: 30px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.darkmodeinput {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.darkmodeinput:checked + .darkmodelabel {
+  background: #242424;
+}
+
+.darkmodeinput:checked + .darkmodelabel:after {
+  left: 80px; 
+  transform: translateX(-100%);
+  background: linear-gradient(180deg, #777, #3a3a3a);
+}
+
+.darkmodelabel:active::after{
+  width: 40px;
+}
 
 .gif-background img {
-    position: absolute;
+  position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -29,6 +73,7 @@ body {
     z-index: 999;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
+    display: flex;
   }
   
   .menu {
