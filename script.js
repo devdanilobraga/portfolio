@@ -32,22 +32,49 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
- function alterarCor() {
+  document.getElementById('darkmode-toggle').addEventListener('change', alterarCor);
+
+  function alterarCor() {
     var body = document.querySelector('body');
-     var elementosTexto = document.querySelectorAll('#contato p, #contato a, #contato form label');
-    var elementosTexto = document.querySelectorAll('h1, p');
-    
-    if (body.style.backgroundColor === 'white') {
-      body.style.backgroundColor = 'black';
-      body.style.color = 'white';
-      elementosTexto.forEach(function(elemento) {
-        elemento.style.color = 'white';
-      });
+    var elementosTextoContato = document.querySelectorAll('#contato p, #contato a, #contato form label');
+    var elementosTextoGenerico = document.querySelectorAll('h1, p');
+    var navbar = document.querySelector('.navbar');
+    var navLinks = document.querySelectorAll('.navbar a');
+    var menuIcon = document.getElementById('menu-toggle');
+
+    if (body.style.backgroundColor === 'white' || body.style.backgroundColor === '') {
+        body.style.backgroundColor = 'black';
+        body.style.color = 'white';
+        navbar.style.backgroundColor = 'black';
+        menuIcon.style.color = 'white';
+
+        navLinks.forEach(function(link) {
+            link.style.color = 'white';
+        });
+
+        elementosTextoContato.forEach(function(elemento) {
+            elemento.style.color = 'white';
+        });
+
+        elementosTextoGenerico.forEach(function(elemento) {
+            elemento.style.color = 'white';
+        });
     } else {
-      body.style.backgroundColor = 'white';
-      body.style.color = 'black';
-      elementosTexto.forEach(function(elemento) {
-        elemento.style.color = 'black';
-      });
+        body.style.backgroundColor = 'white';
+        body.style.color = 'black';
+        navbar.style.backgroundColor = 'white';
+        menuIcon.style.color = 'black';
+
+        navLinks.forEach(function(link) {
+            link.style.color = 'black';
+        });
+
+        elementosTextoContato.forEach(function(elemento) {
+            elemento.style.color = 'black';
+        });
+
+        elementosTextoGenerico.forEach(function(elemento) {
+            elemento.style.color = 'black';
+        });
     }
-  }
+}
