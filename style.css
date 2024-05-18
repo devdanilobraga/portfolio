@@ -301,7 +301,7 @@ p{
 }
 
   /* Estilos para o menu responsivo */
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 600px) {
    
 
     .menu {
