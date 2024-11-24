@@ -12,6 +12,32 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
    
+  // Carrega projetos do arquivo JSON
+  fetch('projetos.json')
+    .then(response => response.json())
+    .then(projetos => {
+      const projetosGrid = document.querySelector('.projetos-grid');
+
+      projetos.forEach(projeto => {
+        const card = document.createElement('div');
+        card.classList.add('projeto-card');
+
+        card.innerHTML = `
+          <a href="${projeto.link}" target="_blank">
+            <img src="${projeto.image}" alt="${projeto.title}">
+            <h3>${projeto.title}</h3>
+            <p>${projeto.description}</p>
+            <div class="tech-icons">
+              ${projeto.technologies.map(tech => `<i class="fa-brands fa-${tech.toLowerCase()}"></i>`).join('')}
+            </div>
+            ${projeto.tags ? `<p>${projeto.tags.join(', ')}</p>` : ''}
+          </a>
+        `;
+
+        projetosGrid.appendChild(card);
+      });
+    })
+    .catch(error => console.error('Erro ao carregar projetos:', error));
 
   function limparCampos() {
     document.getElementById("nome").value = "";
@@ -31,6 +57,25 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
   });
+
+  // Mostrar o botão ao rolar
+window.addEventListener("scroll", () => {
+  const backToTop = document.getElementById("backToTop");
+  if (window.scrollY > 200) {
+    backToTop.classList.add("show");
+  } else {
+    backToTop.classList.remove("show");
+  }
+});
+
+// Função para rolar ao topo
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
 
   document.getElementById('darkmode-toggle').addEventListener('change', alterarCor);
 
