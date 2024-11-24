@@ -8,9 +8,6 @@ body {
       color: black;
     }
 
-.gif-background{
-    margin-bottom: 700px;
-}
 .darkmodelabel {
   width: 80px;
   height: 30px;
@@ -110,71 +107,70 @@ body {
     background: transparent;
   }
 
-  #quem-sou{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    margin-bottom: 120px;
+
+
+  /* Estilo geral */
+#habilidades {
+  text-align: center;
+  padding: 20px;
+  background-color: #f5f5f5; /* Fundo leve */
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+#habilidades p {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 15px 0;
+}
+
+/* Imagem do gráfico */
+.grafico {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Carrossel de logos */
+.logos-carousel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Logos */
+.logo-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+}
+
+/* Hover nos logos */
+.logo-img:hover {
+  transform: scale(1.2); /* Aumenta o tamanho */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
+  cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .logos-carousel {
+      gap: 10px;
   }
 
-  #quem-sou img{
-    width: 200px; 
-    height: auto;
-    float: left;
-    margin-right: 20px;
-    border-radius: 20px;
-    border-bottom: 10px #333;
+  .logo-img {
+      width: 60px;
+      height: 60px;
   }
+}
 
-  #habilidades {
-    text-align: center;
-  }
-
-  #habilidades .logo-img{
-    width: 100px; 
-    height: auto; 
-  }
-
-  #habilidades p {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 26px;
-  }
-  
-  .grafico {
-    width: 800px;
-    height: auto;
-    margin-bottom: 10px;
-  }
-  
-  
-  .logos img {
-    width: 60px; 
-    height: auto; 
-    margin: 5px; 
-  }
-
-  .logo-html{
-    width: 150px;
-    height: auto;
-  }
-
-  .logo .logo-css{
-    width: 30px;
-  }
-  .carousel {
-    margin-top: 20px;
-  }
-  
-  .carousel-item {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .carousel-control-prev,
-  .carousel-control-next {
-    color: #000;
-  }
-  
   .card {
     width: 300px;
     border: 1px solid #ccc;
@@ -332,7 +328,8 @@ p{
 
     .gif-background{
         margin-top: 200px;
-        margin-bottom: 200px;
+      
+                                                                                                                                                                  
     }
 
     #quem-sou{
@@ -340,7 +337,8 @@ p{
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-bottom: 90px;
+  font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
     }
 
     #quem-sou h2{
@@ -348,8 +346,15 @@ p{
         font-weight: bold;
     }
 
-    #quem-sou img{
-      margin-bottom: 10px;
+    .apresentacao{
+      margin-bottom: 100px;
+      max-width: 20px; 
+      height: auto;
+      float: left;
+      margin-right: 20px;
+      border-radius: 20px;
+      border-bottom: 10px #333;
+      
     }
    
     .gif-background .desktop-gif {
@@ -358,17 +363,7 @@ p{
       margin-top: 200px;
     }
 
-    .logos-carousel {
-      margin: 0 auto;
-      max-width: 90%;
-    }
-  
-    .logos-carousel .slick-slide img {
-      width: 100%;
-      height: auto;
-      width: 20px;
-      height: auto;
-    }
+    
     .logo-img{
       width: 20px;
       height: auto;
@@ -416,12 +411,214 @@ p{
 
   }
   
+  #projetos {
+    margin: 2rem;
+  }
+  
+  #projetos h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+  
+  .projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .projeto-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .projeto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .projeto-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  
+  .projeto-card h3 {
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+  }
+  
+  .projeto-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+  }
+  
+  .tecnologias {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .tecnologias i {
+    font-size: 1.5rem;
+    color: #f26522;
+  }
 
+  #quem-sou{
+    display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  }
 
   @media screen and (min-width: 601px) {
     .gif-background .mobile-gif {
       display: none;
       margin-bottom: 700px;
       margin-top: 200px;
+    }
+    #quem-sou h2{
+      font-size: 12px;
+    }
+  }
+
+  .apresentacao{
+    margin-bottom: 100px;
+    max-width: 200px; 
+    height: auto;
+    float: left;
+    margin-right: 20px;
+    border-radius: 20px;
+    border-bottom: 10px #333;
+    
+  }
+
+  body {
+    background-color: #ffffff;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  #projetos {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  #projetos h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333;
+  }
+  
+  .projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .projeto-card {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .projeto-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .projeto-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+  }
+  
+  .projeto-card h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .projeto-card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .tecnologias {
+    margin-top: 10px;
+  }
+  
+  .tecnologias i {
+    font-size: 20px;
+    margin-right: 8px;
+    color: #555;
+  }
+  
+  .back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #007bff; /* Azul */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+  }
+  
+  .back-to-top:hover {
+    background-color: #0056b3; /* Azul escuro */
+    transform: scale(1.1); /* Aumenta ligeiramente no hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
+  }
+  
+  .back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  @media (max-width: 768px) {
+    .back-to-top {
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+      bottom: 15px;
+      right: 15px;
+    }
+    #quem-sou{
+      margin-top: 10px;
+    }
+  }
+
+  #quem-sou{
+    margin-top: 800px;
+  }
+
+  @media (max-width: 768px) {
+    
+    #quem-sou{
+      margin-top: 10px;
     }
   }
