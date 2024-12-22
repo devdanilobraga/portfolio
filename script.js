@@ -85,12 +85,15 @@ function scrollToTop() {
     var navbar = document.querySelector('.navbar');
     var navLinks = document.querySelectorAll('.navbar a');
     var menuIcon = document.getElementById('menu-toggle');
+    var quemSou = document.querySelector('#quem-sou p');
 
     if (body.style.backgroundColor === 'white' || body.style.backgroundColor === '') {
         body.style.backgroundColor = 'black';
         body.style.color = 'white';
         navbar.style.backgroundColor = 'black';
         menuIcon.style.color = 'white';
+        quemSou.style.color = 'white';
+        
 
         navLinks.forEach(function(link) {
             link.style.color = 'white';
@@ -108,6 +111,7 @@ function scrollToTop() {
         body.style.color = 'black';
         navbar.style.backgroundColor = 'white';
         menuIcon.style.color = 'black';
+        quemSou.style.color = 'black';
 
         navLinks.forEach(function(link) {
             link.style.color = 'black';
