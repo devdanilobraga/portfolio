@@ -1,23 +1,18 @@
-body {
-  background-color: white;
-  color: black;
-}
-
-#contato {
-      background-color: white;
-      color: black;
-    }
-
 .darkmodelabel {
-  width: 80px;
+  width: 50px; /* Largura ajustada */
   height: 30px;
-  position: relative;
+  position: fixed;
+  top: 10px; /* Distância do topo */
+  right: 10px; /* Distância da direita */
   display: block;
   background: #ebebeb;
   border-radius: 100px;
-  box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+  box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), 
+              inset 0px -5px 15px rgba(255, 255, 255, 0.4);
   cursor: pointer;
   transition: 0.3s;
+  z-index: 1000; /* Para garantir que esteja sobre outros elementos */
+  margin-bottom: 200px;
 }
 
 .darkmodelabel:after {
@@ -34,9 +29,7 @@ body {
 }
 
 .darkmodeinput {
-  width: 0;
-  height: 0;
-  visibility: hidden;
+  visibility: hidden; /* Oculta o checkbox */
 }
 
 .darkmodeinput:checked + .darkmodelabel {
@@ -44,14 +37,15 @@ body {
 }
 
 .darkmodeinput:checked + .darkmodelabel:after {
-  left: 80px; 
-  transform: translateX(-100%);
+  left: calc(100% - 30px); /* Move o botão para o lado direito do label */
+  transform: translateX(0);
   background: linear-gradient(180deg, #777, #3a3a3a);
 }
 
-.darkmodelabel:active::after{
-  width: 40px;
+.darkmodelabel:active:after {
+  width: 40px; /* Amplia o botão no clique */
 }
+
 
 .gif-background img {
   position: absolute;
@@ -63,7 +57,6 @@ body {
   }
   .navbar {
     background-color: #f2f2f2;
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -203,16 +196,13 @@ body {
   }
   
 #contato {
+  background-color: white;
+  color: black;
   margin-top: 100px;
   background-color: #f9f9f9;
   padding: 20px;
   border-radius: 5px;
   text-align: center;
-}
-
-#contato h2 {
-  font-size: 24px;
-  color: #333;
 }
 
 #contato p {
@@ -334,24 +324,18 @@ p{
 
     #quem-sou{
       display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
-    }
-
-    #quem-sou h2{
-        font-size: 22px;
-        font-weight: bold;
+    margin-bottom: 500px;
     }
 
     .apresentacao{
-      margin-bottom: 100px;
       max-width: 20px; 
       height: auto;
       float: left;
-      margin-right: 20px;
       border-radius: 20px;
       border-bottom: 10px #333;
       
@@ -415,11 +399,6 @@ p{
     margin: 2rem;
   }
   
-  #projetos h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 2rem;
-  }
   
   .projetos-grid {
     display: grid;
@@ -472,10 +451,10 @@ p{
 
   #quem-sou{
     display: flex;
-flex-direction: column;
-align-items: center;
-text-align: center;
-font-family: Arial, Helvetica, sans-serif;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
   }
 
@@ -484,9 +463,6 @@ font-family: Arial, Helvetica, sans-serif;
       display: none;
       margin-bottom: 700px;
       margin-top: 200px;
-    }
-    #quem-sou h2{
-      font-size: 12px;
     }
   }
 
@@ -510,12 +486,6 @@ font-family: Arial, Helvetica, sans-serif;
   #projetos {
     padding: 20px;
     text-align: center;
-  }
-  
-  #projetos h2 {
-    margin-bottom: 20px;
-    font-size: 28px;
-    color: #333;
   }
   
   .projetos-grid {
@@ -612,12 +582,131 @@ font-family: Arial, Helvetica, sans-serif;
     }
   }
 
-  #quem-sou{
-    margin-top: 800px;
-  }
-
   @media (max-width: 768px) {
     #quem-sou{
       margin-top: 10px;
     }
   }
+  
+  body { 
+    font: 400 1em/1.5 "Neuton"; 
+    background: #090d00; 
+    color: rgba(255,255,255,.25); 
+    text-align: center; 
+    margin: 10px;
+  }
+  h4 {
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    text-align: center; /* Centraliza o texto */
+    border: 4px double rgba(14, 10, 10, 0.25);
+    border-width: 4px 0;
+    padding: 1.5em 0;
+    margin: 2em auto; /* Centraliza horizontalmente e adiciona espaço em cima e embaixo */
+    width: 90%; /* Ajuste responsivo */
+    max-width: 40em; /* Limita a largura máxima */
+    font-family: Arial, sans-serif;
+  }
+  
+  h4 span {
+    text-align: center;
+    font: 700 4em/1 "Oswald", sans-serif;
+    letter-spacing: 0;
+    padding: 0.25em 0 0.325em;
+    display: block;
+    margin: 0 auto;
+    text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
+  
+    /* Clip Background Image */
+    background: url(https://wallpapers.com/images/hd/orange-and-black-background-1920-x-1080-65duqlwb25e00pqe.jpg) repeat-y;
+    -webkit-background-clip: text;
+    background-clip: text;
+  
+    /* Animate Background Image */
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: aitf 80s linear infinite;
+  
+    /* Activate hardware acceleration for smoother animations */
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+  }
+  
+  /* Animate Background Image */
+  @-webkit-keyframes aitf {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    h4 {
+      width: 80%;
+      padding: 1em 0;
+      margin: 2em auto; /* Mantém a centralização */
+    }
+  
+    h4 span {
+      font-size: 2em; /* Reduz o tamanho do texto */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h4 {
+      font-size: 12px;
+      width: 90%;
+      padding: 1em 0;
+    }
+  
+    h4 span {
+      font-size: 1.5em; /* Ajusta o tamanho do texto */
+    }
+  }
+  
+
+h2 {
+  font-family: 'Arial', sans-serif; /* Um estilo limpo e moderno */
+  font-weight: bold; /* Para destacar o título */
+  font-size: 2.5rem; /* Tamanho proporcional para desktop */
+  color: #333; /* Uma cor neutra */
+  text-align: center; /* Centralizado para maior impacto visual */
+  margin: 20px 0; /* Espaçamento vertical */
+  line-height: 1.4; /* Melhora a legibilidade */
+  position: relative; /* Para efeitos decorativos */
+  background: linear-gradient(90deg, #333, #f26522, #1d72b8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 2rem; /* Reduz o tamanho para tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.5rem; /* Ajusta ainda mais para celulares */
+  }
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: #f26522; /* Uma cor de destaque */
+  margin: 10px auto 0;
+  border-radius: 2px; /* Bordas arredondadas */
+}
+
+.darkmodeinput:checked ~ h2 {
+  color: #f2f2f2; /* Altere a cor para o modo escuro */
+}
+
+.darkmodeinput:checked ~ h2::after {
+  background: #1d72b8; /* Alterne a cor da linha decorativa */
+}

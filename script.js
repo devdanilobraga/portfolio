@@ -81,8 +81,7 @@ function scrollToTop() {
 
   function alterarCor() {
     var body = document.querySelector('body');
-    var elementosTextoContato = document.querySelectorAll('#contato p, #contato a, #contato form label');
-    var elementosTextoGenerico = document.querySelectorAll('h1, p');
+    var elementosTextoGenerico = document.querySelectorAll('p');
     var navbar = document.querySelector('.navbar');
     var navLinks = document.querySelectorAll('.navbar a');
     var menuIcon = document.getElementById('menu-toggle');
