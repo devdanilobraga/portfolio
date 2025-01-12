@@ -77,6 +77,21 @@
       "image": "assets/chat.png",
       "description": "Um pequeno chat com respostas automáticas e piadas. Ainda não utiliza API.",
       "technologies": ["HTML5", "CSS3", "JavaScript"]
+    },
+    {
+      "title": "Calculadora de Gastos Gastronomia",
+      "link": "https://calculadoradegastronomia.netlify.app/",
+      "image": "assets/gastronomia.png",
+      "description": "Um site para com calculadora para pessoas que trabalham com venda saber quanto gastam em cada unidade.",
+      "technologies": ["HTML5", "CSS3", "JavaScript"]
+    },
+    {
+      "title": "Site com criptos, odd em esportes, surebet e calculadoras",
+      "link": "https://www.calculathor.site/",
+      "image": "assets/calculathor.png",
+      "description": "Site com diversas calculadora e ferramentas para auxiliar a vida dos trades. Tem dominio proprio, estamos fazendo o crescimento dele no ADS.",
+      "technologies": ["HTML5", "CSS3", "JavaScript", "React", "Node.js"]
     }
+
   ]
   
